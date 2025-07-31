@@ -14,8 +14,6 @@ resultado3 = pool.submit(worker, 67, 2)
 resultado4 = pool.submit(worker, 11, 2)
 resultado5 = pool.submit(worker, 77, 2)
 
-
-
 # print(f"resultado del 5: {resultado5.result()}") 
 #hacer .result() es bloqueante por lo que la siguiente linea no se ejecuta hasta que se obtenga el resultado
 
@@ -33,5 +31,5 @@ print("hola mundo")
 
 
 #terminar el pool para que no se puedan hacer mas submits
-pool.shutdown()
-resultado6 = pool.submit(worker, 77, 2) #excepcion
+pool.shutdown(wait=True) #parametro wait opcional, espera a que todos terminen de ejecutarse
+resultado6 = pool.submit(worker, 77, 2) #excepciondef multi_thread_handler(query_result, ruta_bucket_global, root_path):

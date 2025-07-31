@@ -17,6 +17,7 @@ def main():
 
     print("Esperando que terminen los hilos...")
 
+    #esperando que terminen
     hilo1.join()
     hilo2.join()
 
